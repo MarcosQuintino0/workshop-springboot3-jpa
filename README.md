@@ -1,25 +1,19 @@
-# workshop-springboot3-jpa
-# Big Game Survey 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
+
+# Projeto: Web services com Spring Boot e JPA/Hibernate
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/MarcosQuintino0/workshop-springboot3-jpa/blob/main/LICENSE) 
 
 # Sobre o projeto
-
-https://wmazoni-sds1.netlify.app
-
-Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior** (#sds1), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
-
-A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
-
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
-
-## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
-
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+Esse projeto é um sistema de gerenciamento de pedidos desenvolvido durante o curso de Java do Professor Nélio Alves na plataforma Udemy. O objetivo da aplicação é simular o um sistema de gerenciamento de pedido.
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Modelo Conceitual](https://github.com/MarcosQuintino0/Assets/blob/main/Domain-Model.PNG)
+
+## Funcionalidades
+- Criação de usuários: É possível enviar uma requisição POST para a rota /users com os dados do usuário (name, email, phone, password) no formato JSON para criar um novo usuário.
+
+- Criação de pedidos: Envia uma requisição POST para a rota /orders com os dados do pedido (cliente, itens, valor total) no formato JSON.
+
+- Consulta de pedidos: Envia uma requisição GET para a rota /orders para obter a lista de todos os pedidos. É possível também enviar uma requisição GET para a rota /orders/{id} para obter os detalhes de um pedido específico.
 
 # Tecnologias utilizadas
 ## Back end
@@ -27,16 +21,11 @@ A aplicação consiste em uma pesquisa de preferência de games, onde os dados s
 - Spring Boot
 - JPA / Hibernate
 - Maven
-## Front end
-- HTML / CSS / JS / TypeScript
-- ReactJS
-- React Native
-- Apex Charts
-- Expo
+- Postman
+- H2
 ## Implantação em produção
 - Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
+obs: aplicação não esta mais em produção
 
 # Como executar o projeto
 
@@ -45,34 +34,22 @@ Pré-requisitos: Java 11
 
 ```bash
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+1 - git clone https://github.com/MarcosQuintino0/workshop-springboot3-jpa.git
 
 # entrar na pasta do projeto back end
-cd backend
+2 -cd workshop-springboot3-jpa
 
 # executar o projeto
-./mvnw spring-boot:run
-```
+3 -mvn spring-boot:run
 
-## Front end web
-Pré-requisitos: npm / yarn
+4 -Abra o Postman ou outra ferramenta de sua preferência para enviar requisições HTTP para a aplicação.
 
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn start
-```
+5 -Para testar algumas funcionalidades da aplicação, envie as seguintes requisições HTTP:
+◉ Criação de usuário: Envie uma requisição POST para a rota /users com os dados do usuário (name, email, phone, password) no formato JSON.
+◉ Consulta de usuário: Envie uma requisição GET para a rota /users.
 
 # Autor
 
-Wellington Mazoni de Andrade
+Marcos André Quintino
 
-https://www.linkedin.com/in/wmazoni
+https://www.linkedin.com/in/marcos-andre-quintino/
